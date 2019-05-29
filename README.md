@@ -2,6 +2,7 @@ We expect 3 threads for outer parallelism and 2 threads for inner
 
 ## outer ICC / inner GCC
 outer_tid | outer_tnum | outer_get_max_threads | inner_tid | inner_tnum | inner_get_num_threads | inner_get_max_threads
+|---|---|---|---|---|---|---|
   [18076]        [0]               [3]             [18076]        [0]                [1]                    [3]
   [18078]        [1]               [3]             [18078]        [0]                [1]                    [3]
   [18079]        [2]               [3]             [18079]        [0]                [1]                    [3]
