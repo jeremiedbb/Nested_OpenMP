@@ -7,7 +7,7 @@ outer_tid | outer_tnum | outer_get_max_threads | inner_tid | inner_tnum | inner_
 [18078] | [1] | [3] | [18078] | [0] | [1] | [3]
 [18079] | [2] | [3] | [18079] | [0] | [1] | [3]
 
-3 threads for outer as expected (3 unique values for outer_num)
+3 threads for outer as expected (3 unique values for outer_num)  
 Only 1 for inner. Seems that gnu openmp is aware it's in nested parallelism which is disable by default.
 
 ## outer GCC / inner ICC
@@ -24,6 +24,6 @@ outer_tid | outer_tnum | outer_get_max_threads | inner_tid | inner_tnum | inner_
 [18159] | [1] | [3] | [18166] | [1] | [4] | [4]
 [18159] | [1] | [3] | [18159] | [0] | [4] | [4]
 
-3 threads for outer as expected.
-In master thread of outer: 2 inner threads as expected
+3 threads for outer as expected.  
+In master thread of outer: 2 inner threads as expected  
 In other threads: as many as possible (4 is the value returned by omp_get_max_threads before entering the parallel region)
